@@ -3,6 +3,7 @@ import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
 import { SPFI, spfi, SPFx } from "@pnp/sp";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import { RecoilRoot } from "recoil";
 import BulletinBoard from "../../components/bulletin-board/bulletin-board.component";
 
 export interface IBulletinBoardWebPartProps {
@@ -16,7 +17,12 @@ export default class BulletinBoardWebPart extends BaseClientSideWebPart<IBulleti
 
     // Rendert Komponente
     public render(): void {
-        ReactDOM.render(<BulletinBoard showInFullScreen={this.properties.showInFullScreen} />, this.domElement);
+        ReactDOM.render(
+            <RecoilRoot>
+                <BulletinBoard showInFullScreen={this.properties.showInFullScreen} />
+            </RecoilRoot>,
+            this.domElement,
+        );
     }
 
     protected async onInit(): Promise<void> {

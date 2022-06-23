@@ -1,8 +1,11 @@
 import { Stack } from "@fluentui/react";
 import * as _ from "lodash";
 import * as React from "react";
+import { useRecoilState } from "recoil";
 import { fetchAdverts } from "../../data/advert.fetch";
 import { IAdvert } from "../../model/advert.model";
+import { showOnlyFreeAtom } from "../../recoil/bulletin-board-filter.atoms";
+import BulletinBoardFilter from "../bulletin-board-filter/bulletin-board-filter.component";
 import BulletinBoardItem from "../bulletin-board-item/bulletin-board-item.component";
 import FullscreenHelper from "../fullscreen-helper/fullscreen-helper.component";
 
@@ -16,6 +19,9 @@ const BulletinBoard = (props: IBulletinBoardProps) => {
 
     // Zum Speichern der Inserate
     const [adverts, setAdverts] = React.useState<IAdvert[] | null>(null);
+
+    // Zum Speichern ob gefiltert werden soll
+    const [showOnlyFree] = useRecoilState(showOnlyFreeAtom);
 
     // Führe einmalig aus wenn Komponente das erste mal gerendert wird
     // Fetched Inserate und speichert sie in den State
@@ -36,10 +42,14 @@ const BulletinBoard = (props: IBulletinBoardProps) => {
         <>
             {showInFullScreen ? <FullscreenHelper /> : null}
 
+            <BulletinBoardFilter />
+
             <Stack horizontal wrap tokens={{ childrenGap: 15 }}>
-                {adverts.map((each, index) => (
-                    <BulletinBoardItem value={each} />
-                ))}
+                {adverts
+                    .filter((each) => !showOnlyFree || each.Preis === 0)
+                    .map((each, index) => (
+                        <BulletinBoardItem value={each} />
+                    ))}
             </Stack>
         </>
     );
