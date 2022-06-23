@@ -1,0 +1,21 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+    "id": "29e04336-8a06-4e94-849f-0c64206356ed",
+    "alias": "BulletinBoardWebPart",
+    "componentType": "WebPart",
+    "version": "*",
+    "manifestVersion": 2,
+    "requiresCustomScript": false,
+    "supportedHosts": ["SharePointWebPart"],
+    "supportsThemeVariants": true,
+    "preconfiguredEntries": [
+        {
+            "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+            "group": { "default": "Other" },
+            "title": { "default": "BulletinBoard" },
+            "description": { "default": "BulletinBoard description" },
+            "officeFabricIconFontName": "Page",
+            "properties": {}
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+    "version": "2.0",
+    "bundles": {
+        "bulletin-board-web-part": {
+            "components": [
+                {
+                    "entrypoint": "./lib/webparts/bulletin-board/bulletin-board.webpart.js",
+                    "manifest": "./src/webparts/bulletin-board/bulletin-board.manifest.json"
+                }
+            ]
+        }
+    },
+    "externals": {},
+    "localizedResources": {
+        "BulletinBoardWebPartStrings": "lib/webparts/bulletin-board/loc/{locale}.js"
+    }
+}

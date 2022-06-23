@@ -1,0 +1,14 @@
+@import "~@microsoft/sp-office-ui-fabric-core/dist/sass/ThemeOverrides";
+
+.item {
+    width: 300px;
+    background-color: $ms-color-themePrimary;
+
+    hr {
+        width: 100%;
+    }
+
+    .text {
+        color: $ms-color-white;
+    }
+}

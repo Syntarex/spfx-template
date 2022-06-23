@@ -1,0 +1,40 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+    "solution": {
+        "name": "spfx-online-template-client-side-solution",
+        "id": "cae7fd46-821a-4bba-b0c7-d70744959e22",
+        "version": "0.0.1.0",
+        "includeClientSideAssets": true,
+        "skipFeatureDeployment": true,
+        "isDomainIsolated": false,
+        "developer": {
+            "name": "",
+            "websiteUrl": "",
+            "privacyUrl": "",
+            "termsOfUseUrl": "",
+            "mpnId": "Undefined-1.15.0"
+        },
+        "metadata": {
+            "shortDescription": {
+                "default": "spfx-online-template description"
+            },
+            "longDescription": {
+                "default": "spfx-online-template description"
+            },
+            "screenshotPaths": [],
+            "videoUrl": "",
+            "categories": []
+        },
+        "features": [
+            {
+                "title": "spfx-online-template Feature",
+                "description": "The feature that activates elements of the spfx-online-template solution.",
+                "id": "bb8a1325-1343-40f5-bbff-c00c41a543dc",
+                "version": "1.0.0.0"
+            }
+        ]
+    },
+    "paths": {
+        "zippedPackage": "solution/spfx-online-template.sppkg"
+    }
+}
