@@ -4,8 +4,16 @@ import * as React from "react";
 import { fetchAdverts } from "../../data/advert.fetch";
 import { IAdvert } from "../../model/advert.model";
 import BulletinBoardItem from "../bulletin-board-item/bulletin-board-item.component";
+import FullscreenHelper from "../fullscreen-helper/fullscreen-helper.component";
 
-const BulletinBoard = () => {
+interface IBulletinBoardProps {
+    showInFullScreen: boolean;
+}
+
+const BulletinBoard = (props: IBulletinBoardProps) => {
+    // Dekonstruieren der Properties
+    const { showInFullScreen } = props;
+
     // Zum Speichern der Inserate
     const [adverts, setAdverts] = React.useState<IAdvert[] | null>(null);
 
@@ -25,11 +33,15 @@ const BulletinBoard = () => {
 
     // Rendere für jedes Inserat ein BulletinBoardItem
     return (
-        <Stack horizontal wrap tokens={{ childrenGap: 15 }}>
-            {adverts.map((each, index) => (
-                <BulletinBoardItem value={each} />
-            ))}
-        </Stack>
+        <>
+            {showInFullScreen ? <FullscreenHelper /> : null}
+
+            <Stack horizontal wrap tokens={{ childrenGap: 15 }}>
+                {adverts.map((each, index) => (
+                    <BulletinBoardItem value={each} />
+                ))}
+            </Stack>
+        </>
     );
 };
 

@@ -1,10 +1,13 @@
+import { IPropertyPaneConfiguration, PropertyPaneToggle } from "@microsoft/sp-property-pane";
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
 import { SPFI, spfi, SPFx } from "@pnp/sp";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import BulletinBoard from "../../components/bulletin-board/bulletin-board.component";
 
-export interface IBulletinBoardWebPartProps {}
+export interface IBulletinBoardWebPartProps {
+    showInFullScreen: boolean;
+}
 
 export default class BulletinBoardWebPart extends BaseClientSideWebPart<IBulletinBoardWebPartProps> {
     // Erstelle Klassenvariable für globale Verfügbarkeit von sp-Objekt
@@ -13,7 +16,7 @@ export default class BulletinBoardWebPart extends BaseClientSideWebPart<IBulleti
 
     // Rendert Komponente
     public render(): void {
-        ReactDOM.render(<BulletinBoard />, this.domElement);
+        ReactDOM.render(<BulletinBoard showInFullScreen={this.properties.showInFullScreen} />, this.domElement);
     }
 
     protected async onInit(): Promise<void> {
@@ -31,5 +34,28 @@ export default class BulletinBoardWebPart extends BaseClientSideWebPart<IBulleti
     // React-Rendering unterbrechen, wenn WebPart nicht mehr verfügbar ist
     protected onDispose(): void {
         ReactDOM.unmountComponentAtNode(this.domElement);
+    }
+
+    // Erstelle ein Konfigurations-Panel für den WebPart
+    protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
+        return {
+            pages: [
+                {
+                    header: {
+                        description: "Beispiel",
+                    },
+                    groups: [
+                        {
+                            groupName: "Texte ändern",
+                            groupFields: [
+                                PropertyPaneToggle("showInFullScreen", {
+                                    label: "Im Vollbild anzeigen",
+                                }),
+                            ],
+                        },
+                    ],
+                },
+            ],
+        };
     }
 }

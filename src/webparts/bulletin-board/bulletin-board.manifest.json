@@ -15,7 +15,9 @@
             "title": { "default": "BulletinBoard" },
             "description": { "default": "BulletinBoard description" },
             "officeFabricIconFontName": "Page",
-            "properties": {}
+            "properties": {
+                "showInFullScreen": false
+            }
         }
     ]
 }

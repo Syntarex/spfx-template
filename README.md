@@ -2,10 +2,11 @@
 
 ## Vorbereitungen
 
-1. Installiere [Node v16](https://nodejs.org/dist/v16.15.1)
-2. Installiere [Python 2](https://www.python.org/downloads/windows)
-3. Installiere [Visual Studio Code](https://code.visualstudio.com/download)
-4. Installiere yarn: `npm install -g yarn`
+1. [Erlaube Skript-Ausführung auf deinem System](https://techyguide360.com/easy-how-to-enable-running-scripts-in-windows-11)
+2. Installiere [Node v16](https://nodejs.org/dist/v16.15.1)
+3. Installiere [Python 2](https://www.python.org/downloads/windows)
+4. Installiere [Visual Studio Code](https://code.visualstudio.com/download)
+5. Installiere yarn: `npm install -g yarn`
 
 ## Verwenden der Projektvorlage
 
@@ -36,6 +37,10 @@ Diese findet man unter:
 
 1. Installiere alle Projekt-Abhängigkeiten: `yarn install`
 2. Erstelle SSL-Zertifikat: `yarn trust-dev-cert`
+
+##### WorkBench einrichten
+
+Ändere die URLs unter `/.vscode/launch.json` und `/config/serve.json` so, dass sie auf deinen SharePoint zeigen.
 
 ## Scripts
 
