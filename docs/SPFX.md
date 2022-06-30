@@ -27,4 +27,15 @@ Der WebPart ermittelt die vom Benutzer bevorzugte Sprache selbst und zeigt Texte
 
 ### WebPart Properties
 
-TODO
+Jede **WebPart Instanz** kann ein Konfigurationsobjekt halten.
+Dieses Objekt kann verwendet werden um die Darstellung oder Funktionalität des WebParts konfigurierbar zu machen.
+
+Die Standardeinstellungen des Konfigurationsobjektes werden im Manifest des Webparts (`/src/webparts/bulletin-board/bulletin-board.manifest.json`) unter dem Feld `PreconfiguredEntries/Properties` festgelegt.
+Eine Änderung der Standardeinstellungen erfordert ein erneutes Bereitstellen auf dem Zielsystem.
+
+Die Anzeige der WebPart-Einstellungen kann im WebPart selbst (`/src/webparts/bulletin-board/bulletin-board.webpart.tsx`) festgelegt werden. Hierfür wird die Funktion `getPropertyPaneConfiguration` überschrieben.
+Der Aufbau des zurückgegebenen Objektes kann der Typisierung bzw. dem Beispiel entnommen werden.
+
+Als Controls zur Bearbeitung einzelner Werte, stellt das SharePoint Framework verschiedene Standards bereit. Diese können der [offiziellen Dokumentation](https://docs.microsoft.com/de-de/sharepoint/dev/spfx/web-parts/basics/integrate-with-property-pane) entnommen werden.
+
+Theoretisch können Controls auch selbst erstellt werden. Der Aufwand ist hierfür allerdings oft ungerechtfertigt hoch. Auch das komplette Panel kann selbst erstellt werden, hiervon wird allerdings stark abgeraten, da dann auch der komplette Daten-Flow selbst gesteuert werden muss.

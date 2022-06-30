@@ -1,5 +1,43 @@
 # Entwicklung
 
+## yarn
+
+SPFx-Lösungen nutzen standardmäßig `npm` als Paket-Manager.
+
+`yarn` ist optionaler Paket-Manager, welcher `npm` komplett ersetzen kann. Dieser bietet bessere Performance, Optimierung des lokalen Speicherbedarfs und eine bessere Darstellung von Skript-Ausgaben.
+
+Es ergeben sich keine Nachteile `yarn` statt `npm` zu nutzen. Wenn dies dennoch nicht erwünscht ist, kann `npm`, nach einer Neuinstallation der Abhängigkeiten, genutzt werden.
+
+##### Skript ausführen
+
+Skripte können in der `/package.json` definiert werden und mittels `yarn` ausgeführt werden.
+
+```
+yarn <SCRIPT_NAME>
+```
+
+Beispiel: `yarn build`
+
+##### Alle Pakete installieren
+
+Mithilfe diesen Befehls können alle in der `/package.json` referenzierten Abhängigkeiten installiert werden.
+
+```
+yarn install
+```
+
+##### Paket hinzufügen
+
+```
+yarn add <PACKAGE>
+```
+
+##### Paket entfernen
+
+```
+yarn remove <PACKAGE>
+```
+
 ## Bibliotheken
 
 Eine Übersicht über die wichtigsten verwendeten Bibliotheken.
@@ -35,14 +73,6 @@ Unser Zielsystem ist der SharePoint 2019. Die Build-Chain die verwendet wird, st
 
 Dieses Dokument soll Aufschluss darüber geben, welche Tools SPFx nutzt und an welchen Stellen wir eingreifen können bzw. sollten.
 
-### npm
-
-**Pakete können in der `/package.json` gepflegt werden.**
-
-SPFx-Lösungen nutzen standardmäßig `npm` als Paket-Manager. Sprich neue Pakete, wie Hilfs- oder Komponenten-Bibliotheken, können über `npm` installiert werden.
-
-`npm` wird außerdem verwendet um sogenannte `scripts` zu definieren. Diese `scripts` sind als Shortcut für Entwickler gedacht um oft verwendete Prozesse zu vereinfachen.
-
 ### TypeScript
 
 **Der TypeScript-Compiler kann unter `/tsconfig.json` konfiguriert werden.**
@@ -72,6 +102,8 @@ WebPack führt also viele verschiedene und verteilte Dateien und Formatte zu ein
 
 ### ESLint
 
-**ESLint ist standardmäßig SEHR restriktiv konfiguriert deprecated und ist in der Projektvorlage komplett deaktiviert und durch Prettier ersetzt.**
+**ESLint ist standardmäßig SEHR restriktiv konfiguriert und ist deshalb in der Projektvorlage komplett deaktiviert. Code-Konventionen werden mithilfe von Prettier automatisch erzwungen.**
 
 ESLint wird vor dem eigentlichen TypeScript-Kompilierungsprozess verwendet um den Code auf bestimmte Regeln zu prüfen und ggf. Fehler zu werfen. Wird verwendet um Code-Konventionen zu erzwingen. Beispielhaft kann festgelegt werden, wie viele Zeichen eine Code-Zeile lang sein darf.
+
+Die Standard-Einstellungen die das SharePoint Framework mitliefert, sind allerdings eher restriktiv und halten den Progress des Projektes oft stark auf. Es wurde deshalb bewusst auf die Verwendung von ESLint verzichtet.

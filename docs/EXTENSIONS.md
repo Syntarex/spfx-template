@@ -10,11 +10,10 @@ Ermöglicht die Konfiguration des VSCode Editors über die Konfigurationsdatei `
 ## Prettier
 
 Ermöglicht das automatische Korrigieren von Linting-Fehlern.
-Die Korrektur des Codes erfolgt nach den eingestellten ESLint Regeln.
 
 ## npm Intellisense
 
-Ermöglicht npm-spezifische Autovervollständigung im VSCode Editor.
+Ermöglicht Autovervollständigung von installierten Paketen im VSCode Editor.
 
 ## Path Intellisense
 

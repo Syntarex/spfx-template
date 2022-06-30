@@ -3,7 +3,7 @@
 ## Testing
 
 ```
-npm run serve
+yarn serve
 ```
 
 Startet man den Test-Server, packt das SharePoint Framework ein Lösungspaket (`/sharepoint/solution/<name>.sppkg`), welches in SharePoint bereitgestellt werden kann. Anschließend kann man den WebPart, so wie jeden anderen WebPart, einfach auf einer Seite einbinden und anzeigen lassen.
@@ -23,7 +23,7 @@ Das Lösungspaket muss nur im App-Catalog der Site Collection hochgeladen und ei
 Ein produktiv verwendbares Lösungspaket (`/sharepoint/solution/<name>.sppkg`) lässt sich mit diesem Kommando erstellen:
 
 ```
-npm run ship
+yarn ship
 ```
 
 In diesem Lösungspaket befindet sich alles für die produktive Nutzung.
