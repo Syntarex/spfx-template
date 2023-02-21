@@ -24,7 +24,7 @@ build.configureWebpack.mergeConfig({
     },
 });
 
-build.initialize(require("gulp"));
+build.initialize(gulp);
 
 gulp.task("version-sync", (done) => {
     // import gulp utilits to write error messages
