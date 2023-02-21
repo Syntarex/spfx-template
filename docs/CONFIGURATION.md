@@ -15,6 +15,8 @@ Die unter `/.editorconfig` gesetzten Einstellungen werden von der VSCode Erweite
 Diese Vorlage setzt die VSCode Erweiterung "Prettier" (`esbenp.prettier-vscode`) als Standard-Formattierer für den Editor ein.
 Bedeutet, dass Prettier beim Speichern den eigenen Code gegen alle festgelegten Prettier-Regeln prüft und gefundene Abweichungen automatisch behebt.
 
+Siehe `.vscode/settings.json`:
+
 ```
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",

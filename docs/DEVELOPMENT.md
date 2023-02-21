@@ -69,7 +69,7 @@ React hat einen komponentenbasierten Ansatz und integriert sich sehr gut mit dem
 
 Die Build-Chain beschreibt das Verwenden verschiedener Tools in Kombination um das Projekt zu bauen und für das Zielsystem verwendbar zu machen.
 
-Unser Zielsystem ist der SharePoint 2019. Die Build-Chain die verwendet wird, stellt das SharePoint Framework (SPFx) für uns bereit. Wir haben allerdings die Möglichkeit an einigen Stellen über Konfiguration oder sogar selbstgeschriebenen Code einzugreifen.
+Unser Zielsystem ist der SharePoint Online. Die Build-Chain die verwendet wird, stellt das SharePoint Framework (SPFx) für uns bereit. Wir haben allerdings die Möglichkeit an einigen Stellen über Konfiguration oder sogar selbstgeschriebenen Code einzugreifen.
 
 Dieses Dokument soll Aufschluss darüber geben, welche Tools SPFx nutzt und an welchen Stellen wir eingreifen können bzw. sollten.
 
