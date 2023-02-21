@@ -4,6 +4,7 @@ import * as _ from "lodash";
 import * as React from "react";
 import { fetchUserById } from "../../data/user-by-id.fetch";
 import { IAdvert } from "../../model/advert.model";
+import { IUser } from "../../model/user.model";
 import styles from "./bulletin-board-item.module.scss";
 
 interface IBulletinBoardItemProps {

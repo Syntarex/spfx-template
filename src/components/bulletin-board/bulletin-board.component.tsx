@@ -48,7 +48,7 @@ const BulletinBoard = (props: IBulletinBoardProps) => {
                 {adverts
                     .filter((each) => !showOnlyFree || each.Preis === 0)
                     .map((each, index) => (
-                        <BulletinBoardItem value={each} />
+                        <BulletinBoardItem key={`item-${index}`} value={each} />
                     ))}
             </Stack>
         </>
