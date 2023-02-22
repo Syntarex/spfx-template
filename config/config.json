@@ -2,17 +2,17 @@
     "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
     "version": "2.0",
     "bundles": {
-        "bulletin-board-web-part": {
+        "example-web-part": {
             "components": [
                 {
-                    "entrypoint": "./lib/webparts/bulletin-board/bulletin-board.webpart.js",
-                    "manifest": "./src/webparts/bulletin-board/bulletin-board.manifest.json"
+                    "entrypoint": "./lib/webparts/example/example.webpart.js",
+                    "manifest": "./src/webparts/example/example.manifest.json"
                 }
             ]
         }
     },
     "externals": {},
     "localizedResources": {
-        "BulletinBoardWebPartStrings": "lib/webparts/bulletin-board/loc/{locale}.js"
+        "ExampleStrings": "lib/webparts/example/loc/{locale}.js"
     }
 }

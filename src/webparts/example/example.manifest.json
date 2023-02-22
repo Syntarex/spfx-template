@@ -1,7 +1,7 @@
 {
     "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
-    "id": "29e04336-8a06-4e94-849f-0c64206356ed",
-    "alias": "BulletinBoardWebPart",
+    "id": "29e04336-8a06-4e94-849f-0c24106356ed",
+    "alias": "ExampleWebPart",
     "componentType": "WebPart",
     "version": "*",
     "manifestVersion": 2,
@@ -12,12 +12,10 @@
         {
             "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
             "group": { "default": "Other" },
-            "title": { "default": "BulletinBoard" },
-            "description": { "default": "BulletinBoard description" },
+            "title": { "default": "Example" },
+            "description": { "default": "Description" },
             "officeFabricIconFontName": "Page",
-            "properties": {
-                "showInFullScreen": false
-            }
+            "properties": {}
         }
     ]
 }
