@@ -30,7 +30,7 @@ $ git init
 Jede Lösung und jeder WebPart muss eine eindeutige UUID besitzen.
 Diese findet man unter:
 
--   `/src/webparts/bulletin-board.manifest.json`
+-   `/src/webparts/example.manifest.json`
 -   `/config/package-solution.json`
 
 ##### Installieren
