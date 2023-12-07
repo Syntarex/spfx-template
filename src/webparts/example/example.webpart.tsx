@@ -1,3 +1,4 @@
+import { initializeIcons } from "@fluentui/react";
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
 import { SPFI, spfi, SPFx } from "@pnp/sp";
 import * as React from "react";
@@ -22,6 +23,9 @@ export default class ExampleWebPart extends BaseClientSideWebPart<ExampleWebPart
         await super.onInit();
 
         this.reactRoot = createRoot(this.domElement);
+
+        // Initialisiere FluentUI-Icons
+        initializeIcons();
 
         // Initialisiere global erreichbare Klassenvariable
         // Nutzt den SPFx-Kontext um das sp-Objekt von PnPJS zu initialisieren
